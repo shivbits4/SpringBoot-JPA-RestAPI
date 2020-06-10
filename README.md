@@ -14,3 +14,5 @@ Initialize your project using the above link.Add following dependencies: Spring 
 
 Then click on generate and your project is ready!!
 
+Download Postgresql and Postman to get started.
+
