@@ -1,0 +1,19 @@
+JPA (Java Persistence API) acts as abstraction layer to avoid coding the boilerplate code. 
+Using JPA the burden of interacting with the database is reduced significantly. 
+To use JPA one just have to create an interface and extend JPARepository<Datatype_1, Datatype_2>
+
+Datatype_1 = POJO class that you want to store in the database (In our case it's Employee.java)
+Datatype_2 = Type of the field, which is set to primary in Employee.java 
+
+Voila!! That's all you have to do to interact with the database
+
+JPA has in-built methods like findAll(), findById() which always comes in handy. You can aslo create custom methods if you want to 
+perform some other query on the db.
+
+Suppose you want to fetch records based on a particular column (ex: occupation). To do this you only have to write a single line of code:
+
+List<Employee> findByOccupation(String occu);
+
+This single line will be implemented automatically, at runtime, from a repository interface.
+
+This is what makes spring jpa powerful. You don't have to write any implementations of the repository interface!!
